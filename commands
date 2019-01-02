@@ -1,0 +1,4 @@
+"error: docker: signature from "Arch Linux ARM Build System <builder@archlinuxarm.org>" is unknown trust"
+pacman-key --init
+pacman-key --populate archlinuxarm
+
