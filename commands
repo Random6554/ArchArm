@@ -2,3 +2,12 @@
 pacman-key --init
 pacman-key --populate archlinuxarm
 
+
+"docker: Error response from daemon: driver failed programming external connectivity on endpoint asteriskpi (d864c3a6b07b4892b86b546c90c78288fb69d390feeb6119719a77a0dbfd77e2):  (iptables failed: iptables --wait -t nat -A DOCKER -p tcp -d 0/0 --dport 5060 -j DNAT --to-destination 172.17.0.2:5060 ! -i docker0: iptables v1.8.2 (legacy): unknown option "--dport"
+Try `iptables -h' or 'iptables --help' for more information.
+ (exit status 2))."
+[root@dockerpi docker-raspberrypi]# iptables --version
+iptables v1.8.2 (legacy)
+
+cd /var/cache/pacman/pkg/
+pacman -U iptables-1.6.2-2-armv7h.pkg.tar.xz
