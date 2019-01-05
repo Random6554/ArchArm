@@ -1,0 +1,6 @@
+apt-get update
+apt-get install -y software-properties-common
+
+# Install tor
+apt-get install tor
+service tor start
